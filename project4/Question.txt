@@ -1,0 +1,27 @@
+You are asked to implement one step of the Lloyd's algorithm for K-Means clustering using Spark and Scala. The goal is to partition a set of points into k clusters of neighboring points. It starts with an initial set of k centroids. Then, it repeatedly partitions the input according to which of these centroids is closest and then finds a new centroid for each partition. That is, if you have a set of points P and a set of k centroids C, the algorithm repeatedly applies the following steps:
+
+Assignment step: partition the set P into k clusters of points Pi, one for each centroid Ci, such that a point p belongs to Pi if it is closest to the centroid Ci among all centroids.
+Update step: Calculate the new centroid Ci from the cluster Pi so that the x,y coordinates of Ci is the mean x,y of all points in Pi.
+The datasets used are random points on a plane in the squares (i*2+1,j*2+1)-(i*2+2,j*2+2), with 0≤i≤9 and 0≤j≤9 (so k=100 in k-means). The initial centroids in centroid.txt are the points (i*2+1.2,j*2+1.2). So the new centroids should be in the middle of the squares at (i*2+1.5,j*2+1.5).
+
+In this project, you are asked to implement one step of the K-means clustering algorithm using Spark and Scala. A skeleton file project4/src/main/scala/KMeans.scala is provided, as well as scripts to build and run this code on Comet. You should modify KMeans.scala only. Your main program should take two arguments: the text file that contains the points (points-small.txt or points-large.txt) and the centroids.txt file. The resulting centroids will be written to the output. This time, the process of finding new centroids from previous centroids using KMeans must be repeated 5 times. Note: you need to broadcast the centroids to worker nodes using the Spark broadcast method (see Broadcast Variables (Links to an external site.) on p41 in the notes):
+
+    centroids = /* initial centroids from the file centroids.txt */
+
+    for ( i <- 1 to 5 ) {
+       val cs = sc.broadcast(centroids)
+       centroids = points.map { p => (cs.value.minBy(distance(p,_)), p) }
+                         .groupByKey().map { /* ... calculate a new centroid ... */ }
+    }
+where distance(x,y) calculates the distance between two points x and y.
+
+You can compile KMeans.scala on Comet using:
+
+run kmeans.build
+and you can run it in local mode over the small data using:
+
+sbatch kmeans.local.run
+You should modify and run your programs in local mode until you get the correct result. Your output should be similar to (but not necessarily the same as) the results in solution-small.txt. After you make sure that your program runs correctly in local mode, you run it in distributed mode using:
+
+sbatch kmeans.distr.run
+This will work on the moderate-sized data and will print the results to the output. Your output should be similar to (but not necessarily the same as) the results in solution-large.txt.
