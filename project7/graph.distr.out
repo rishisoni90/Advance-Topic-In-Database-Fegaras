@@ -1,0 +1,783 @@
+myHadoop: Setting MH_IPOIB_TRANSFORM='s/\([^.]*\).*$/\1.ibnet/' from myhadoop.conf
+myHadoop: Setting MH_SCRATCH_DIR=/scratch/$USER/$SLURM_JOBID from myhadoop.conf
+myHadoop: Using HADOOP_HOME=/opt/hadoop/2.6.0
+myHadoop: Using MH_SCRATCH_DIR=/scratch/rxs4020/37142080
+myHadoop: Using JAVA_HOME=/lib/jvm/java
+myHadoop: Generating Hadoop configuration in directory in /home/rxs4020/cometcluster...
+myHadoop: Backing up old config dir to /home/rxs4020/cometcluster.12...
+'/home/rxs4020/cometcluster' -> '/home/rxs4020/cometcluster.12'
+myHadoop: Designating comet-14-01.ibnet as master node (namenode, secondary namenode, and jobtracker)
+myHadoop: The following nodes will be slaves (datanode, tasktracer):
+comet-14-01.ibnet
+comet-14-02.ibnet
+20/11/24 12:24:27 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = comet-14-01.sdsc.edu/198.202.112.231
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 2.6.0
+STARTUP_MSG:   classpath = /home/rxs4020/cometcluster:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/api-util-1.0.0-M20.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/junit-4.11.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/slf4j-api-1.7.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/activation-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jettison-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-framework-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsch-0.1.42.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/htrace-core-3.0.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/apacheds-i18n-2.0.0-M15.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jasper-compiler-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/httpclient-4.2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hamcrest-core-1.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jets3t-0.9.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-recipes-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jaxb-api-2.2.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hadoop-annotations-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-client-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hadoop-auth-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-digester-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-el-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-httpclient-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-collections-3.2.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/avro-1.7.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/httpcore-4.2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/xmlenc-0.52.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-configuration-1.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/paranamer-2.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/mockito-all-1.8.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-beanutils-1.7.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-json-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-net-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/java-xmlbuilder-0.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/zookeeper-3.4.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/api-asn1-api-1.0.0-M20.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsp-api-2.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/snappy-java-1.0.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/gson-2.2.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/stax-api-1.0-2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jasper-runtime-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-beanutils-core-1.8.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-math3-3.1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-nfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-common-2.6.0-tests.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xml-apis-1.3.04.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/htrace-core-3.0.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-el-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xmlenc-0.52.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xercesImpl-2.9.1.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jsp-api-2.1.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jasper-runtime-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-nfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-2.6.0-tests.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/activation-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jettison-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-client-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/aopalliance-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-jaxrs-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-httpclient-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-collections-3.2.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/javax.inject-1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guice-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-json-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/zookeeper-3.4.6.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-xc-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jline-0.9.94.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-registry-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-api-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-client-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-tests-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/junit-4.11.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/hadoop-annotations-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/leveldbjni-all-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/avro-1.7.4.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/javax.inject-1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/guice-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/snappy-java-1.0.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.6.0-tests.jar:/opt/hadoop/2.6.0/contrib/capacity-scheduler/*.jar
+STARTUP_MSG:   build = https://git-wip-us.apache.org/repos/asf/hadoop.git -r e3496499ecb8d220fba99dc5ed4c99c8f9e33bb1; compiled by 'jenkins' on 2014-11-13T21:10Z
+STARTUP_MSG:   java = 1.8.0_212
+************************************************************/
+20/11/24 12:24:27 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+20/11/24 12:24:27 INFO namenode.NameNode: createNameNode [-format]
+20/11/24 12:24:28 WARN common.Util: Path /scratch/rxs4020/37142080/namenode_data should be specified as a URI in configuration files. Please update hdfs configuration.
+20/11/24 12:24:28 WARN common.Util: Path /scratch/rxs4020/37142080/namenode_data should be specified as a URI in configuration files. Please update hdfs configuration.
+Formatting using clusterid: CID-8e90ae7f-6f9e-4513-9832-5367f952611a
+20/11/24 12:24:28 INFO namenode.FSNamesystem: No KeyProvider found.
+20/11/24 12:24:28 INFO namenode.FSNamesystem: fsLock is fair:true
+20/11/24 12:24:28 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit=1000
+20/11/24 12:24:28 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+20/11/24 12:24:28 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+20/11/24 12:24:28 INFO blockmanagement.BlockManager: The block deletion will start around 2020 Nov 24 12:24:28
+20/11/24 12:24:28 INFO util.GSet: Computing capacity for map BlocksMap
+20/11/24 12:24:28 INFO util.GSet: VM type       = 64-bit
+20/11/24 12:24:28 INFO util.GSet: 2.0% max memory 966.7 MB = 19.3 MB
+20/11/24 12:24:28 INFO util.GSet: capacity      = 2^21 = 2097152 entries
+20/11/24 12:24:28 INFO blockmanagement.BlockManager: dfs.block.access.token.enable=false
+20/11/24 12:24:28 INFO blockmanagement.BlockManager: defaultReplication         = 3
+20/11/24 12:24:28 INFO blockmanagement.BlockManager: maxReplication             = 512
+20/11/24 12:24:28 INFO blockmanagement.BlockManager: minReplication             = 1
+20/11/24 12:24:28 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+20/11/24 12:24:28 INFO blockmanagement.BlockManager: shouldCheckForEnoughRacks  = false
+20/11/24 12:24:28 INFO blockmanagement.BlockManager: replicationRecheckInterval = 3000
+20/11/24 12:24:28 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+20/11/24 12:24:28 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+20/11/24 12:24:28 INFO namenode.FSNamesystem: fsOwner             = rxs4020 (auth:SIMPLE)
+20/11/24 12:24:28 INFO namenode.FSNamesystem: supergroup          = supergroup
+20/11/24 12:24:28 INFO namenode.FSNamesystem: isPermissionEnabled = true
+20/11/24 12:24:28 INFO namenode.FSNamesystem: HA Enabled: false
+20/11/24 12:24:28 INFO namenode.FSNamesystem: Append Enabled: true
+20/11/24 12:24:28 INFO util.GSet: Computing capacity for map INodeMap
+20/11/24 12:24:28 INFO util.GSet: VM type       = 64-bit
+20/11/24 12:24:28 INFO util.GSet: 1.0% max memory 966.7 MB = 9.7 MB
+20/11/24 12:24:28 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+20/11/24 12:24:29 INFO namenode.NameNode: Caching file names occuring more than 10 times
+20/11/24 12:24:29 INFO util.GSet: Computing capacity for map cachedBlocks
+20/11/24 12:24:29 INFO util.GSet: VM type       = 64-bit
+20/11/24 12:24:29 INFO util.GSet: 0.25% max memory 966.7 MB = 2.4 MB
+20/11/24 12:24:29 INFO util.GSet: capacity      = 2^18 = 262144 entries
+20/11/24 12:24:29 INFO namenode.FSNamesystem: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+20/11/24 12:24:29 INFO namenode.FSNamesystem: dfs.namenode.safemode.min.datanodes = 0
+20/11/24 12:24:29 INFO namenode.FSNamesystem: dfs.namenode.safemode.extension     = 30000
+20/11/24 12:24:29 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+20/11/24 12:24:29 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+20/11/24 12:24:29 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+20/11/24 12:24:29 INFO util.GSet: VM type       = 64-bit
+20/11/24 12:24:29 INFO util.GSet: 0.029999999329447746% max memory 966.7 MB = 297.0 KB
+20/11/24 12:24:29 INFO util.GSet: capacity      = 2^15 = 32768 entries
+20/11/24 12:24:29 INFO namenode.NNConf: ACLs enabled? false
+20/11/24 12:24:29 INFO namenode.NNConf: XAttrs enabled? true
+20/11/24 12:24:29 INFO namenode.NNConf: Maximum size of an xattr: 16384
+20/11/24 12:24:29 INFO namenode.FSImage: Allocated new BlockPoolId: BP-1111426495-198.202.112.231-1606249469054
+20/11/24 12:24:29 INFO common.Storage: Storage directory /scratch/rxs4020/37142080/namenode_data has been successfully formatted.
+20/11/24 12:24:29 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+20/11/24 12:24:29 INFO util.ExitUtil: Exiting with status 0
+20/11/24 12:24:29 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at comet-14-01.sdsc.edu/198.202.112.231
+************************************************************/
+Starting namenodes on [comet-14-01.ibnet]
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: starting namenode, logging to /scratch/rxs4020/37142080/logs/hadoop-rxs4020-namenode-comet-14-01.sdsc.edu.out
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: starting datanode, logging to /scratch/rxs4020/37142080/logs/hadoop-rxs4020-datanode-comet-14-01.sdsc.edu.out
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-02.ibnet: starting datanode, logging to /scratch/rxs4020/37142080/logs/hadoop-rxs4020-datanode-comet-14-02.sdsc.edu.out
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+Starting secondary namenodes [comet-14-01.ibnet]
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: starting secondarynamenode, logging to /scratch/rxs4020/37142080/logs/hadoop-rxs4020-secondarynamenode-comet-14-01.sdsc.edu.out
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+starting yarn daemons
+starting resourcemanager, logging to /scratch/rxs4020/37142080/logs/yarn-rxs4020-resourcemanager-comet-14-01.out
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: starting nodemanager, logging to /scratch/rxs4020/37142080/logs/yarn-rxs4020-nodemanager-comet-14-01.sdsc.edu.out
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-02.ibnet: starting nodemanager, logging to /scratch/rxs4020/37142080/logs/yarn-rxs4020-nodemanager-comet-14-02.sdsc.edu.out
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+which: no hbase in (/opt/hadoop/2.6.0/sbin:/opt/hadoop/contrib/myHadoop/bin:/opt/hadoop/2.6.0/bin:/opt/mvapich2/intel/ib/bin:/opt/intel/2018.1.163/compilers_and_libraries_2018.1.163/linux/bin/intel64:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/sdsc/bin:/opt/sdsc/sbin:/opt/ibutils/bin:/opt/pdsh/bin:/opt/rocks/bin:/opt/rocks/sbin:/home/rxs4020/bin)
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/oasis/projects/nsf/uot143/fegaras/apache-hive-2.1.0-bin/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop/2.6.0/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/oasis/projects/nsf/uot143/fegaras/apache-hive-2.1.0-bin/lib/hive-common-2.1.0.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 3.779 seconds
+OK
+Time taken: 0.368 seconds
+OK
+Time taken: 0.62 seconds
+OK
+Time taken: 0.083 seconds
+Loading data to table default.graph1
+OK
+Time taken: 1.926 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = rxs4020_20201124122509_6de7ba39-775e-4b2c-87a7-485af56cc53a
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1606249490856_0001, Tracking URL = http://comet-14-01.ibnet:8088/proxy/application_1606249490856_0001/
+Kill Command = /opt/hadoop/2.6.0/bin/hadoop job  -kill job_1606249490856_0001
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2020-11-24 12:25:25,312 Stage-1 map = 0%,  reduce = 0%
+2020-11-24 12:25:52,406 Stage-1 map = 64%,  reduce = 0%, Cumulative CPU 35.77 sec
+2020-11-24 12:25:55,523 Stage-1 map = 67%,  reduce = 0%, Cumulative CPU 38.96 sec
+2020-11-24 12:25:58,637 Stage-1 map = 85%,  reduce = 0%, Cumulative CPU 42.91 sec
+2020-11-24 12:26:00,705 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 45.48 sec
+2020-11-24 12:26:11,034 Stage-1 map = 100%,  reduce = 87%, Cumulative CPU 54.55 sec
+2020-11-24 12:26:14,136 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 57.81 sec
+MapReduce Total cumulative CPU time: 57 seconds 810 msec
+Ended Job = job_1606249490856_0001
+Loading data to table default.graph2
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 57.81 sec   HDFS Read: 140805017 HDFS Write: 5058836 SUCCESS
+Total MapReduce CPU Time Spent: 57 seconds 810 msec
+OK
+Time taken: 58.97 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = rxs4020_20201124122509_6de7ba39-775e-4b2c-87a7-485af56cc53a
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1606249490856_0002, Tracking URL = http://comet-14-01.ibnet:8088/proxy/application_1606249490856_0002/
+Kill Command = /opt/hadoop/2.6.0/bin/hadoop job  -kill job_1606249490856_0002
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2020-11-24 12:26:20,435 Stage-1 map = 0%,  reduce = 0%
+2020-11-24 12:26:24,582 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 2.34 sec
+2020-11-24 12:26:29,737 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.85 sec
+MapReduce Total cumulative CPU time: 3 seconds 850 msec
+Ended Job = job_1606249490856_0002
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1606249490856_0003, Tracking URL = http://comet-14-01.ibnet:8088/proxy/application_1606249490856_0003/
+Kill Command = /opt/hadoop/2.6.0/bin/hadoop job  -kill job_1606249490856_0003
+Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
+2020-11-24 12:26:34,394 Stage-2 map = 0%,  reduce = 0%
+2020-11-24 12:26:38,542 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 1.01 sec
+2020-11-24 12:26:43,678 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 2.56 sec
+MapReduce Total cumulative CPU time: 2 seconds 560 msec
+Ended Job = job_1606249490856_0003
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 3.85 sec   HDFS Read: 5066296 HDFS Write: 6084 SUCCESS
+Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 2.56 sec   HDFS Read: 11432 HDFS Write: 5636 SUCCESS
+Total MapReduce CPU Time Spent: 6 seconds 410 msec
+OK
+635	1
+435	1
+422	1
+420	1
+415	1
+413	1
+410	1
+409	1
+405	1
+403	2
+402	1
+396	1
+394	1
+389	2
+385	1
+383	1
+369	2
+303	2
+302	1
+301	1
+300	1
+298	1
+297	1
+295	2
+294	3
+292	2
+291	1
+290	2
+289	2
+288	1
+286	3
+285	1
+283	1
+282	5
+281	3
+280	7
+279	1
+278	4
+277	6
+276	4
+275	7
+274	6
+273	6
+272	3
+271	5
+270	4
+269	5
+268	4
+267	3
+266	2
+265	9
+264	6
+263	4
+262	4
+261	4
+260	3
+259	5
+258	3
+257	3
+255	5
+254	3
+253	4
+252	2
+251	3
+249	2
+247	2
+246	1
+245	1
+244	2
+240	2
+237	1
+234	1
+224	1
+223	1
+221	2
+220	1
+219	1
+217	1
+213	2
+212	1
+211	7
+210	4
+209	5
+208	7
+207	9
+206	2
+205	10
+204	8
+203	8
+202	5
+201	8
+200	7
+199	13
+198	10
+197	12
+196	15
+195	13
+194	17
+193	26
+192	21
+191	22
+190	23
+189	25
+188	33
+187	18
+186	30
+185	19
+184	23
+183	34
+182	23
+181	26
+180	31
+179	18
+178	22
+177	31
+176	33
+175	27
+174	20
+173	25
+172	20
+171	18
+170	23
+169	24
+168	20
+167	19
+166	20
+165	14
+164	15
+163	10
+162	7
+161	8
+160	12
+159	8
+158	9
+157	9
+156	7
+155	4
+154	5
+153	3
+152	6
+151	5
+150	11
+149	8
+148	6
+147	8
+146	3
+145	10
+144	16
+143	23
+142	27
+141	25
+140	26
+139	38
+138	36
+137	37
+136	52
+135	55
+134	67
+133	73
+132	69
+131	95
+130	94
+129	98
+128	111
+127	113
+126	146
+125	132
+124	130
+123	140
+122	123
+121	126
+120	139
+119	143
+118	159
+117	142
+116	147
+115	128
+114	129
+113	107
+112	125
+111	90
+110	88
+109	84
+108	76
+107	73
+106	65
+105	62
+104	75
+103	66
+102	54
+101	71
+100	63
+99	88
+98	106
+97	93
+96	122
+95	130
+94	167
+93	176
+92	213
+91	253
+90	267
+89	317
+88	352
+87	362
+86	393
+85	451
+84	448
+83	528
+82	506
+81	545
+80	531
+79	471
+78	517
+77	517
+76	478
+75	478
+74	461
+73	441
+72	435
+71	405
+70	428
+69	425
+68	403
+67	462
+66	494
+65	512
+64	607
+63	750
+62	759
+61	926
+60	1037
+59	1064
+58	1217
+57	1282
+56	1413
+55	1433
+54	1558
+53	1623
+52	1601
+51	1567
+50	1569
+49	1546
+48	1604
+47	1561
+46	1679
+45	1857
+44	1818
+43	2097
+42	2256
+41	2500
+40	2736
+39	3063
+38	3305
+37	3519
+36	3684
+35	3959
+34	4065
+33	4242
+32	4545
+31	4587
+30	4848
+29	5260
+28	5598
+27	6063
+26	6766
+25	7313
+24	7879
+23	8382
+22	8930
+21	9541
+20	10100
+19	11124
+18	11821
+17	12796
+16	13873
+15	14763
+14	15946
+13	17333
+12	18360
+11	19762
+10	20814
+9	22145
+8	23418
+7	24268
+6	24711
+5	24340
+4	23470
+3	20831
+2	16885
+1	11313
+Time taken: 29.26 seconds, Fetched: 291 row(s)
+stopping yarn daemons
+stopping resourcemanager
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-02.ibnet: stopping nodemanager
+comet-14-02.ibnet: nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: stopping nodemanager
+comet-14-01.ibnet: nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+no proxyserver to stop
+Stopping namenodes on [comet-14-01.ibnet]
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: stopping namenode
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-02.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-02.ibnet: stopping datanode
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: stopping datanode
+Stopping secondary namenodes [comet-14-01.ibnet]
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+comet-14-01.ibnet: /home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+comet-14-01.ibnet: stopping secondarynamenode
+Copying Hadoop logs back to /home/rxs4020/cometcluster/logs...
+'/scratch/rxs4020/37142080/logs' -> '/home/rxs4020/cometcluster/logs'
+'/scratch/rxs4020/37142080/logs/yarn-rxs4020-nodemanager-comet-14-01.sdsc.edu.log' -> '/home/rxs4020/cometcluster/logs/yarn-rxs4020-nodemanager-comet-14-01.sdsc.edu.log'
+'/scratch/rxs4020/37142080/logs/hadoop-rxs4020-namenode-comet-14-01.sdsc.edu.log' -> '/home/rxs4020/cometcluster/logs/hadoop-rxs4020-namenode-comet-14-01.sdsc.edu.log'
+'/scratch/rxs4020/37142080/logs/hadoop-rxs4020-secondarynamenode-comet-14-01.sdsc.edu.out' -> '/home/rxs4020/cometcluster/logs/hadoop-rxs4020-secondarynamenode-comet-14-01.sdsc.edu.out'
+'/scratch/rxs4020/37142080/logs/hadoop-rxs4020-datanode-comet-14-01.sdsc.edu.log' -> '/home/rxs4020/cometcluster/logs/hadoop-rxs4020-datanode-comet-14-01.sdsc.edu.log'
+'/scratch/rxs4020/37142080/logs/yarn-rxs4020-resourcemanager-comet-14-01.out' -> '/home/rxs4020/cometcluster/logs/yarn-rxs4020-resourcemanager-comet-14-01.out'
+'/scratch/rxs4020/37142080/logs/SecurityAuth-rxs4020.audit' -> '/home/rxs4020/cometcluster/logs/SecurityAuth-rxs4020.audit'
+'/scratch/rxs4020/37142080/logs/hadoop-rxs4020-datanode-comet-14-01.sdsc.edu.out' -> '/home/rxs4020/cometcluster/logs/hadoop-rxs4020-datanode-comet-14-01.sdsc.edu.out'
+'/scratch/rxs4020/37142080/logs/yarn-rxs4020-resourcemanager-comet-14-01.log' -> '/home/rxs4020/cometcluster/logs/yarn-rxs4020-resourcemanager-comet-14-01.log'
+'/scratch/rxs4020/37142080/logs/hadoop-rxs4020-namenode-comet-14-01.sdsc.edu.out' -> '/home/rxs4020/cometcluster/logs/hadoop-rxs4020-namenode-comet-14-01.sdsc.edu.out'
+'/scratch/rxs4020/37142080/logs/hadoop-rxs4020-secondarynamenode-comet-14-01.sdsc.edu.log' -> '/home/rxs4020/cometcluster/logs/hadoop-rxs4020-secondarynamenode-comet-14-01.sdsc.edu.log'
+'/scratch/rxs4020/37142080/logs/yarn-rxs4020-nodemanager-comet-14-01.sdsc.edu.out' -> '/home/rxs4020/cometcluster/logs/yarn-rxs4020-nodemanager-comet-14-01.sdsc.edu.out'
+'/scratch/rxs4020/37142080/logs/userlogs' -> '/home/rxs4020/cometcluster/logs/userlogs'
+'/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002' -> '/home/rxs4020/cometcluster/logs/userlogs/application_1606249490856_0002'
+'/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000003' -> '/home/rxs4020/cometcluster/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000003'
+'/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000003/syslog' -> '/home/rxs4020/cometcluster/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000003/syslog'
+'/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000003/stdout' -> '/home/rxs4020/cometcluster/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000003/stdout'
+'/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000003/stderr' -> '/home/rxs4020/cometcluster/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000003/stderr'
+'/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003' -> '/home/rxs4020/cometcluster/logs/userlogs/application_1606249490856_0003'
+'/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000001' -> '/home/rxs4020/cometcluster/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000001'
+'/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000001/stdout' -> '/home/rxs4020/cometcluster/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000001/stdout'
+'/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000001/syslog' -> '/home/rxs4020/cometcluster/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000001/syslog'
+'/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000001/stderr' -> '/home/rxs4020/cometcluster/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000001/stderr'
+/home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+/home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/12/.tmp_reduce.xml.crc’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/12/reduce.xml’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/12’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/11/map.xml’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/11/.tmp_map.xml.crc’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/11’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/13/map.xml’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/13/.tmp_map.xml.crc’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/13’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/10/reduce.xml’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/10/.tmp_reduce.xml.crc’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/10’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/appcache’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/nmPrivate’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/filecache’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch’
+removed ‘/scratch/rxs4020/37142080/tmp/dfs/namesecondary/current/edits_0000000000000000001-0000000000000000087’
+removed ‘/scratch/rxs4020/37142080/tmp/dfs/namesecondary/current/fsimage_0000000000000000000.md5’
+removed ‘/scratch/rxs4020/37142080/tmp/dfs/namesecondary/current/fsimage_0000000000000000087’
+removed ‘/scratch/rxs4020/37142080/tmp/dfs/namesecondary/current/fsimage_0000000000000000087.md5’
+removed ‘/scratch/rxs4020/37142080/tmp/dfs/namesecondary/current/fsimage_0000000000000000000’
+removed ‘/scratch/rxs4020/37142080/tmp/dfs/namesecondary/current/VERSION’
+removed directory: ‘/scratch/rxs4020/37142080/tmp/dfs/namesecondary/current’
+removed directory: ‘/scratch/rxs4020/37142080/tmp/dfs/namesecondary’
+removed directory: ‘/scratch/rxs4020/37142080/tmp/dfs’
+removed directory: ‘/scratch/rxs4020/37142080/tmp’
+removed ‘/scratch/rxs4020/37142080/namenode_data/current/VERSION’
+removed ‘/scratch/rxs4020/37142080/namenode_data/current/fsimage_0000000000000000087’
+removed ‘/scratch/rxs4020/37142080/namenode_data/current/fsimage_0000000000000000000’
+removed ‘/scratch/rxs4020/37142080/namenode_data/current/seen_txid’
+removed ‘/scratch/rxs4020/37142080/namenode_data/current/edits_inprogress_0000000000000000088’
+removed ‘/scratch/rxs4020/37142080/namenode_data/current/edits_0000000000000000001-0000000000000000087’
+removed ‘/scratch/rxs4020/37142080/namenode_data/current/fsimage_0000000000000000000.md5’
+removed ‘/scratch/rxs4020/37142080/namenode_data/current/fsimage_0000000000000000087.md5’
+removed directory: ‘/scratch/rxs4020/37142080/namenode_data/current’
+removed directory: ‘/scratch/rxs4020/37142080/namenode_data’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/VERSION’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/dncp_block_verification.log.curr’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/VERSION’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741849_1025.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741863_1039.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741850_1026.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741825’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741838_1014.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741835_1011.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741839_1015.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741838’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741826_1002.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741851’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741826’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741863’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741862_1038.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741851_1027.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741835’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741837’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741861’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741849’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741850’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741862’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741837_1013.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741861_1037.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741825_1001.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741839’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/dfsUsed’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/rbw’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/dncp_block_verification.log.prev’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/tmp’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data’
+removed directory: ‘/scratch/rxs4020/37142080/pids’
+removed ‘/scratch/rxs4020/37142080/logs/yarn-rxs4020-nodemanager-comet-14-01.sdsc.edu.log’
+removed ‘/scratch/rxs4020/37142080/logs/hadoop-rxs4020-namenode-comet-14-01.sdsc.edu.log’
+removed ‘/scratch/rxs4020/37142080/logs/hadoop-rxs4020-secondarynamenode-comet-14-01.sdsc.edu.out’
+removed ‘/scratch/rxs4020/37142080/logs/hadoop-rxs4020-datanode-comet-14-01.sdsc.edu.log’
+removed ‘/scratch/rxs4020/37142080/logs/yarn-rxs4020-resourcemanager-comet-14-01.out’
+removed ‘/scratch/rxs4020/37142080/logs/SecurityAuth-rxs4020.audit’
+removed ‘/scratch/rxs4020/37142080/logs/hadoop-rxs4020-datanode-comet-14-01.sdsc.edu.out’
+removed ‘/scratch/rxs4020/37142080/logs/yarn-rxs4020-resourcemanager-comet-14-01.log’
+removed ‘/scratch/rxs4020/37142080/logs/hadoop-rxs4020-namenode-comet-14-01.sdsc.edu.out’
+removed ‘/scratch/rxs4020/37142080/logs/hadoop-rxs4020-secondarynamenode-comet-14-01.sdsc.edu.log’
+removed ‘/scratch/rxs4020/37142080/logs/yarn-rxs4020-nodemanager-comet-14-01.sdsc.edu.out’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000003/syslog’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000003/stdout’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000003/stderr’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000003’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000001/stdout’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000001/syslog’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000001/stderr’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000001’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs’
+removed directory: ‘/scratch/rxs4020/37142080/logs’
+/home/rxs4020/.bashrc: line 11: unexpected EOF while looking for matching `''
+/home/rxs4020/.bashrc: line 12: syntax error: unexpected end of file
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/filecache’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/nmPrivate’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/12/.tmp_reduce.xml.crc’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/12/reduce.xml’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/12’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/15/.tmp_map.xml.crc’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/15/map.xml’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/15’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/11/map.xml’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/11/.tmp_map.xml.crc’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/11’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/14/.tmp_reduce.xml.crc’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/14/reduce.xml’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/14’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/13/.tmp_map.xml.crc’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/13/map.xml’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/13’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/10/.tmp_reduce.xml.crc’
+removed ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/10/reduce.xml’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache/10’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/filecache’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020/appcache’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache/rxs4020’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch/usercache’
+removed directory: ‘/scratch/rxs4020/37142080/mapred_scratch’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/tmp’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/dncp_block_verification.log.prev’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/VERSION’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/dfsUsed’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/rbw’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741861_1037.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741825_1001.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741825’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741837_1013.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741863’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741851’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741826’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741835’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741838’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741851_1027.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741862_1038.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741837’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741839_1015.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741861’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741826_1002.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741835_1011.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741839’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741838_1014.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741849_1025.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741850_1026.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741849’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741863_1039.meta’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741862’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0/blk_1073741850’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0/subdir0’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized/subdir0’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current/finalized’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/current’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054/dncp_block_verification.log.curr’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current/BP-1111426495-198.202.112.231-1606249469054’
+removed ‘/scratch/rxs4020/37142080/hdfs_data/current/VERSION’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data/current’
+removed directory: ‘/scratch/rxs4020/37142080/hdfs_data’
+removed directory: ‘/scratch/rxs4020/37142080/pids’
+removed ‘/scratch/rxs4020/37142080/logs/yarn-rxs4020-nodemanager-comet-14-02.sdsc.edu.out’
+removed ‘/scratch/rxs4020/37142080/logs/hadoop-rxs4020-datanode-comet-14-02.sdsc.edu.log’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000003/stderr’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000003/stdout’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000003/syslog’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000003’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000002/stderr’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000002/stdout’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000002/syslog’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003/container_1606249490856_0003_01_000002’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0003’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000002/syslog’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000002/stdout’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000002/stderr’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000002’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000001/stdout’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000001/syslog’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000001/stderr’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002/container_1606249490856_0002_01_000001’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0002’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0001/container_1606249490856_0001_01_000002/stderr’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0001/container_1606249490856_0001_01_000002/syslog’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0001/container_1606249490856_0001_01_000002/stdout’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0001/container_1606249490856_0001_01_000002’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0001/container_1606249490856_0001_01_000001/stderr’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0001/container_1606249490856_0001_01_000001/stdout’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0001/container_1606249490856_0001_01_000001/syslog’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0001/container_1606249490856_0001_01_000001’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0001/container_1606249490856_0001_01_000003/stderr’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0001/container_1606249490856_0001_01_000003/syslog’
+removed ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0001/container_1606249490856_0001_01_000003/stdout’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0001/container_1606249490856_0001_01_000003’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs/application_1606249490856_0001’
+removed directory: ‘/scratch/rxs4020/37142080/logs/userlogs’
+removed ‘/scratch/rxs4020/37142080/logs/yarn-rxs4020-nodemanager-comet-14-02.sdsc.edu.log’
+removed ‘/scratch/rxs4020/37142080/logs/hadoop-rxs4020-datanode-comet-14-02.sdsc.edu.out’
+removed ‘/scratch/rxs4020/37142080/logs/SecurityAuth-rxs4020.audit’
+removed directory: ‘/scratch/rxs4020/37142080/logs’
+removed directory: '/tmp/Jetty_0_0_0_0_50070_hdfs____w2cu08_7406558462198823186/jsp'
+removed directory: '/tmp/Jetty_0_0_0_0_50070_hdfs____w2cu08_7406558462198823186/.active'
+removed directory: '/tmp/Jetty_0_0_0_0_50070_hdfs____w2cu08_7406558462198823186'
+removed directory: '/tmp/Jetty_0_0_0_0_50075_datanode____hwtdwq_2446988904391552122/jsp'
+removed directory: '/tmp/Jetty_0_0_0_0_50075_datanode____hwtdwq_2446988904391552122/.active'
+removed directory: '/tmp/Jetty_0_0_0_0_50075_datanode____hwtdwq_2446988904391552122'
+removed directory: '/tmp/Jetty_comet.14.01_ibnet_50090_secondary____.df0qd1_7803047840358900499/jsp'
+removed directory: '/tmp/Jetty_comet.14.01_ibnet_50090_secondary____.df0qd1_7803047840358900499/.active'
+removed directory: '/tmp/Jetty_comet.14.01_ibnet_50090_secondary____.df0qd1_7803047840358900499'
